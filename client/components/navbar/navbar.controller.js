@@ -2,9 +2,10 @@
 
 angular.module('nspenderApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
-    $scope.menu = [{
-      'title': 'Home',
-      'link': '/'
+    $scope.menu = [
+    {
+      'title': 'Categories',
+      'link': '/categories'
     }];
 
     $scope.isCollapsed = true;

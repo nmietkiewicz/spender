@@ -3,7 +3,7 @@
 angular.module('nspenderApp')
   .controller('CategoriesCtrl', function ($scope, $http, socket) {
     $scope.categoryList = [];
-    $scope.newCategory = "";
+    $scope.newCategory = '';
 
     $http.get('/api/categories').success(function(categoryList) {
       $scope.categoryList = categoryList;

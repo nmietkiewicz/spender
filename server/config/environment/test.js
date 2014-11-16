@@ -5,6 +5,6 @@
 module.exports = {
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/angulartube-test'
+    uri: 'mongodb://localhost/nspender-test'
   }
 };

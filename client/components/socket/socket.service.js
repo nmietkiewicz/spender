@@ -1,7 +1,7 @@
 /* global io */
 'use strict';
 
-angular.module('angularTubeApp')
+angular.module('nspenderApp')
   .factory('socket', function(socketFactory) {
 
     // socket.io now auto-configures its connection when we ommit a connection url

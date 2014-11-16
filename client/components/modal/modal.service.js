@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angularTubeApp')
+angular.module('nspenderApp')
   .factory('Modal', function ($rootScope, $modal) {
     /**
      * Opens a modal

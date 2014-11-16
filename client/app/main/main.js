@@ -1,10 +1,9 @@
 'use strict';
 
-angular.module('angularTubeApp')
-  .config(function ($stateProvider) {
-    $stateProvider
-      .state('main', {
-        url: '/',
+angular.module('nspenderApp')
+  .config(function ($routeProvider) {
+    $routeProvider
+      .when('/', {
         templateUrl: 'app/main/main.html',
         controller: 'MainCtrl'
       });

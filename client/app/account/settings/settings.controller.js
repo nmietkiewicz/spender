@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angularTubeApp')
+angular.module('nspenderApp')
   .controller('SettingsCtrl', function ($scope, User, Auth) {
     $scope.errors = {};
 

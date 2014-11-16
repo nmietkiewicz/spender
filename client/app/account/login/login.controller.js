@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('angularTubeApp')
-  .controller('LoginCtrl', function ($scope, Auth, $location, $window) {
+angular.module('nspenderApp')
+  .controller('LoginCtrl', function ($scope, Auth, $location) {
     $scope.user = {};
     $scope.errors = {};
 
@@ -23,7 +23,4 @@ angular.module('angularTubeApp')
       }
     };
 
-    $scope.loginOauth = function(provider) {
-      $window.location.href = '/auth/' + provider;
-    };
   });

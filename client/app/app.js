@@ -1,16 +1,18 @@
 'use strict';
 
-angular.module('angularTubeApp', [
+angular.module('nspenderApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
+  'ngRoute',
   'btford.socket-io',
-  'ui.router',
   'ui.bootstrap'
 ])
-  .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
-    $urlRouterProvider
-      .otherwise('/');
+  .config(function ($routeProvider, $locationProvider, $httpProvider) {
+    $routeProvider
+      .otherwise({
+        redirectTo: '/'
+      });
 
     $locationProvider.html5Mode(true);
     $httpProvider.interceptors.push('authInterceptor');
@@ -44,7 +46,7 @@ angular.module('angularTubeApp', [
 
   .run(function ($rootScope, $location, Auth) {
     // Redirect to login if route requires auth and you're not logged in
-    $rootScope.$on('$stateChangeStart', function (event, next) {
+    $rootScope.$on('$routeChangeStart', function (event, next) {
       Auth.isLoggedInAsync(function(loggedIn) {
         if (next.authenticate && !loggedIn) {
           $location.path('/login');

@@ -5,7 +5,7 @@
 module.exports = {
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/angulartube-dev'
+    uri: 'mongodb://localhost/nspender-dev'
   },
 
   seedDB: true

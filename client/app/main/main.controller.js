@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angularTubeApp')
+angular.module('nspenderApp')
   .controller('MainCtrl', function ($scope, $http, socket) {
     $scope.awesomeThings = [];
 

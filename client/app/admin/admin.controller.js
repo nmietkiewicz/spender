@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angularTubeApp')
+angular.module('nspenderApp')
   .controller('AdminCtrl', function ($scope, $http, Auth, User) {
 
     // Use the User $resource to fetch all users

@@ -21,6 +21,16 @@ angular.module('nspenderApp')
         });
 
 
+ $scope.dateOptions = {
+    formatYear: 'yy',
+    startingDay: 1
+  };
+
+  $scope.formats = ['dd-MM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
+  $scope.format = $scope.formats[0];
+
+
+
         $scope.addThing = function() {
             if ($scope.newValue === '') {
                 return;

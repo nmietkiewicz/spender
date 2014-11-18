@@ -1,1 +1,1 @@
-{"virtualbox":{"/ionic-app":{"guestpath":"/ionic-app","hostpath":"F:/_Other/spender/ionic-app","disabled":false},"/vagrant":{"guestpath":"/vagrant","hostpath":"F:/_Other/spender","disabled":false}}}
+{"virtualbox":{"/ionic-app":{"guestpath":"/ionic-app","hostpath":"C:/Vagrant/Playground/nspender/ionic-app","disabled":false},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Vagrant/Playground/nspender","disabled":false}}}

@@ -19,6 +19,17 @@ if(config.seedDB) { require('./config/seed'); }
 
 // Setup server
 var app = express();
+
+app.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8100');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    next();
+});
+
+
+
 var server = require('http').createServer(app);
 var socketio = require('socket.io')(server, {
   serveClient: (config.env === 'production') ? false : true,
@@ -27,6 +38,10 @@ var socketio = require('socket.io')(server, {
 require('./config/socketio')(socketio);
 require('./config/express')(app);
 require('./routes')(app);
+
+
+
+
 
 // Start server
 server.listen(config.port, config.ip, function () {

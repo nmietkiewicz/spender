@@ -1,0 +1,29 @@
+<ion-view title="New Expense">
+    <ion-content class="padding">
+        <form ng-submit="createExpense()">
+            <div class="list">
+                <label class="item item-input">
+                    <input type="date" placeholder="Data" ng-model="newExpense.date">
+                </label>
+                <label class="item item-input">
+                    <input type="text" placeholder="Kwota" ng-model="newExpense.value">
+                </label>
+                <label class="item item-input">
+                    <input type="text" placeholder="Tytuł"  ng-model="newExpense.title">
+                </label>
+                <label class="item item-input item-select" >
+                    <div class="input-label"> Kategoria
+                    </div>
+
+                    <select ng-model="newExpense.category">
+                        <option ng-repeat="category in categoryList">{{category.name}}</option>
+                    </select>
+                </label>
+
+            </div>
+            <div class="padding">
+                <button class="button button-block button-positive">Submit</button>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>
